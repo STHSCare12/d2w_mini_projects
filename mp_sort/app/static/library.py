@@ -1,8 +1,15 @@
 from org.transcrypt.stubs.browser import *
 import random
+import copy
 
 def gen_random_int(number, seed):
-	pass
+	random.seed(seed)
+	my_list = []
+	for i in range(number):
+		my_list.append(i)
+	random.shuffle(my_list)
+	result = copy.copy(my_list)
+	return result
 
 def generate():
 	number = 10
@@ -10,15 +17,23 @@ def generate():
 
 	# call gen_random_int() with the given number and seed
 	# store it to the variable array
-	pass
-
 	array = None
+	array = gen_random_int(number, seed)
+	n = len(array)
+
 	# convert the items into one single string 
 	# the number should be separated by a comma
 	# and a full stop should end the string.
-	pass
-
+	
 	array_str = None
+	if array_str is None:
+		array_str = ""
+
+	for i in range(n):
+		array_str += str(array[i]) + ','
+	array_str = array_str[:-1]
+	array_str = array_str + '.'
+	# return array_str
 
 	# This line is to placed the string into the HTML
 	# under div section with the id called "generate"	
@@ -35,9 +50,29 @@ def sortnumber1():
 		- call your sort function, either bubble sort or insertion sort
 		- create a string of the sorted numbers and store it in array_str
 	'''
-	pass
-
+	generateNum = document.getElementById('generate').innerHTML
+	array = []
+	for i in generateNum.split(','):
+		array.append(int(i))
+	n = len(array)
+	swapped = True
+	while swapped == True:
+		swapped = False
+		new_n = 0
+		for si in range(1, n):
+			if array[si-1] > array[si]:
+				array[si-1], array[si] = array[si], array[si-1]
+				swapped = True
+				new_n = si
+		n = new_n
 	array_str = None
+	if array_str is None:
+		array_str = ""
+
+	for i in range(len(array)):
+		array_str += str(array[i]) + ','
+	array_str = array_str[:-1]
+	array_str = array_str + '.'
 	
 	document.getElementById("sorted").innerHTML = array_str
 
@@ -62,9 +97,28 @@ def sortnumber2():
 
 	# Your code should start from here
 	# store the final string to the variable array_str
-	pass
-
+	array = []
+	for i in value.split(','):
+		array.append(int(i))
+	n = len(array)
+	swapped = True
+	while swapped == True:
+		swapped = False
+		new_n = 0
+		for si in range(1, n):
+			if array[si-1] > array[si]:
+				array[si-1], array[si] = array[si], array[si-1]
+				swapped = True
+				new_n = si
+		n = new_n
 	array_str = None
+	if array_str is None:
+		array_str = ""
+
+	for i in range(len(array)):
+		array_str += str(array[i]) + ','
+	array_str = array_str[:-1]
+	array_str = array_str + '.'
 
 	document.getElementById("sorted").innerHTML = array_str
 
