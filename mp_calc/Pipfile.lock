@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "662e6cb82e83be84a459eeb8429f3af13ee6f6cde6779d4932c06cfc1ab311dd"
+            "sha256": "e2531b32e14b77510c28c77bbc6f19f85e544bcdba50275d5d8e470c886ea85f"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.12"
+            "python_version": "3.10"
         },
         "sources": [
             {
@@ -178,7 +178,7 @@
                 "sha256:f406b22b7c9a9b4f8aa9d2ab13d6ae0ac3e85c9a809bd590ad53fed2bf70dc79",
                 "sha256:f6ff3b14f2df4c41660a7dec01045a045653998784bf8cfcb5a525bdffffbc8f"
             ],
-            "markers": "python_version < '3.13' and (platform_machine == 'aarch64' or (platform_machine == 'ppc64le' or (platform_machine == 'x86_64' or (platform_machine == 'amd64' or (platform_machine == 'AMD64' or (platform_machine == 'win32' or platform_machine == 'WIN32'))))))",
+            "markers": "python_version >= '3.7'",
             "version": "==3.1.1"
         },
         "importlib-resources": {
@@ -389,6 +389,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.0.36"
+        },
+        "tomli": {
+            "hashes": [
+                "sha256:2ebe24485c53d303f690b0ec092806a085f07af5a5aa1464f3931eec36caaa38",
+                "sha256:d46d457a85337051c36524bc5349dd91b1877838e2979ac5ced3e710ed8a60ed"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==2.0.2"
         },
         "transcrypt": {
             "hashes": [

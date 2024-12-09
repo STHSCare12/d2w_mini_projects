@@ -10,7 +10,7 @@ def merge(array: list, p: int, q: int, r: int, byfunc = None) -> list:
   k = p
   if byfunc == None:
     while i < n_left and j < n_right:
-      if left[i] <= right[i]:
+      if left[i] <= right[j]:
         array[k] = left[i]
         i += 1
         k += 1
