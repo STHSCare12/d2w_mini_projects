@@ -39,6 +39,19 @@ def generate():
 	# under div section with the id called "generate"	
 	document.getElementById("generate").innerHTML = array_str
 
+def bubblesort(array):
+	n = len(array)
+	swapped = True
+	while swapped == True:
+		swapped = False
+		new_n = 0
+		for si in range(1, n):
+			if array[si-1] > array[si]:
+				array[si-1], array[si] = array[si], array[si-1]
+				swapped = True
+				new_n = si
+		n = new_n
+	return array
 
 def sortnumber1():
 	'''	This function is used in Exercise 1.
@@ -54,17 +67,9 @@ def sortnumber1():
 	array = []
 	for i in generateNum.split(','):
 		array.append(int(i))
-	n = len(array)
-	swapped = True
-	while swapped == True:
-		swapped = False
-		new_n = 0
-		for si in range(1, n):
-			if array[si-1] > array[si]:
-				array[si-1], array[si] = array[si], array[si-1]
-				swapped = True
-				new_n = si
-		n = new_n
+
+	bubblesort(array)
+
 	array_str = None
 	if array_str is None:
 		array_str = ""
@@ -100,17 +105,9 @@ def sortnumber2():
 	array = []
 	for i in value.split(','):
 		array.append(int(i))
-	n = len(array)
-	swapped = True
-	while swapped == True:
-		swapped = False
-		new_n = 0
-		for si in range(1, n):
-			if array[si-1] > array[si]:
-				array[si-1], array[si] = array[si], array[si-1]
-				swapped = True
-				new_n = si
-		n = new_n
+
+	bubblesort(array)
+
 	array_str = None
 	if array_str is None:
 		array_str = ""
